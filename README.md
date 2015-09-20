@@ -1,20 +1,15 @@
-# tch2015
 
-#Weather underground api
+Weather underground APIs:
 http://api.wunderground.com/api/b44b1327c40539f8/forecast10day/q/CA/San_Francisco.json
 
-IF your are like me..
+Zalando APIs:
+https://api.zalando.com/
+https://api.zalando.com/swagger/index.html#!/articles/get_articles
+https://api.zalando.com/articles?season=summer
 
-Think about how much time is wasted in mundane permutations of your wardrobe selection ... and you are still not o n top of it.
-Introducing TenOnTen - the perfect solution for your personalized wardrobe. 
-If every ticking second is money....  TenOnTen is your money saver.
-
-TenOnTen recommends based on
-- your "individual choices" (show preferences tab)
-- your "day's schedule" 
-- "what's in your wardrobe" ....   
-- And extraneous factors like "weather and venue".
-- 
-Moreover TenTen even helps you grow your wardrobe.
-
-TenTen empowers you to display your best persona - hassle free.
+Office365 References:
+https://outlook.office365.com/owa/?realm=hrookdemo11.onmicrosoft.com#path=/calendar/view/Month
+https://outlook.office365.com/api/v1.0/me/events?$select=Subject,Organizer,Start,End
+https://msdn.microsoft.com/office/office365/APi/calendar-rest-operations#UsingtheCalendarRESTAPI
+ 
+http://techcrunchhack2015.herokuapp.com/

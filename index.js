@@ -3,6 +3,7 @@ var Promise = require("bluebird");
 var async = require("async");
 var app = express();
 var fs = require("fs");
+var http = require('http');
 var https = require('https');
 
 app.set('port', (process.env.PORT || 5000));
@@ -35,10 +36,10 @@ app.get('/getStubData', function (req, res) {
    });
 })
 
-app.get('/getTrends', function (req, response) {
-   console.log("getting customized trends...");
-   var http = require('http');
-   var url = "http://api.wunderground.com/api/b44b1327c40539f8/forecast10day/q";
+app.get('/getWeather', function (req, response) {
+   console.log("getting weather data...");
+//   var http = require('http');
+//   var url = "https://api.wunderground.com/api/b44b1327c40539f8/forecast10day/q";
    var data = "";
    
    var options = {
@@ -53,14 +54,14 @@ app.get('/getTrends', function (req, response) {
             data += chunk;
         });
         res.on('end', function() {
-            var dataobject = JSON.parse(data);
-            var weatherforecast = [];
-            for (var i = 0; i < 10; i++) { 
-                var temp = "day" + ':' + dataobject.forecast.simpleforecast.forecastday[i].date.day;
-                weatherforecast.push(temp);
-            }
-            console.log(weatherforecast);
-            response.end(JSON.stringify(weatherforecast));
+            //var dataobject = JSON.parse(data);
+            // var weatherforecast = [];
+            // for (var i = 0; i < 10; i++) { 
+            //     var temp = "day" + ':' + dataobject.forecast.simpleforecast.forecastday[i].date.day;
+            //     weatherforecast.push(temp);
+            // }
+            //console.log(weatherforecast);
+            response.end(data);
         });
         res.on('errors', function(e){
             console.log("There was an error: " + e.message)
