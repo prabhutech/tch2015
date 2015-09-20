@@ -25,9 +25,9 @@ app.use(function(req, res, next) {
   }
 });
 
-app.get('/', function(request, response) {
-  response.render('pages/index');
-});
+// app.get('/', function(request, response) {
+//   response.render('pages/index');
+// });
 
 app.get('/getStubData', function (req, res) {
    fs.readFile( __dirname + "/public/" + "data.json", 'utf8', function (err, data) {
