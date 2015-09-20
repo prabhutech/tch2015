@@ -8,8 +8,11 @@
     "test": "nodeunit tests/example.js"
   },
   "dependencies": {
+    "async": "^1.4.2",
+    "bluebird": "^2.10.0",
     "ejs": "2.3.3",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "walmart": "0.0.4"
   },
   "engines": {
     "node": "0.12.7"

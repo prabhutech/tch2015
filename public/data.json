@@ -1,58 +1,66 @@
 [
     {
-        date: "Friday Sep 18",
-        weather: {
-            icon_url: "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
-            status: "Cloudy.",
-            temperature: "65 F"
+        "date": "Friday Sep 18",
+        "weather": {
+            "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+            "status": "Cloudy.",
+            "temperature": "65 F"
         },
-        events: [{
-                    title: "Interview appointment",
-                    type: "business"
-                },
-                {
-                    title: "To the beach",
-                    type: "casual"
-        }],
-        clothing: [{
-            title: "Sleeveless jacket",
-            photo: "",
-            isInWadrobe: true,
-            productUrl: ""
-        },
-        {
-            title: "Chukka boots",
-            photo: "",
-            isInWadrobe: false,
-            productUrl: ""
-        }]
+        "events": [
+            {
+                "title": "Interview appointment",
+                "type": "business"
+            },
+            {
+                "title": "To the beach",
+                "type": "casual"
+            }
+        ],
+        "clothing": [
+            {
+                "title": "Sleeveless jacket",
+                "photo": "https://secure-i1.ztat.net/detail_hd/TP/82/2O/0A/1K/11/TP822O0A1-K11@13.jpg",
+                "isInWadrobe": true,
+                "productUrl": ""
+            },
+            {
+                "title": "Chukka boots",
+                "photo": "",
+                "isInWadrobe": false,
+                "productUrl": ""
+            }
+        ]
     },
     {
-        date: "Saturday Sep 19",
-        weather: {
-            icon_url: "http://icons.wxug.com/i/c/k/clear.gif",
-            status: "Sunny.",
-            temperature: "78 F"
+        "date": "Saturday Sep 19",
+        "weather": {
+            "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+            "status": "Sunny.",
+            "temperature": "78 F"
         },
-        events: [{
-                    title: "Baby sitting",
-                    type: "casual"
-                },
-                {
-                    title: "Weekly Team meeting",
-                    type: "business"
-        }],
-        clothing: [{
-            title: "Sunglasses",
-            photo: "",
-            isInWadrobe: true,
-            productUrl: ""
-        },
-        {
-            title: "Sandals",
-            photo: "",
-            isInWadrobe: false,
-            productUrl: ""
-        }]
+        "events": [
+            {
+                "title": "Baby sitting",
+                "type": "casual"
+            },
+            {
+                "title": "Weekly Team meeting",
+                "type": "business"
+            }
+        ],
+        "clothing": [
+            {
+                "title": "Sunglasses",
+                "photo": "https://secure-i3.ztat.net/camp//96/8d/07e979a28b559adc8605a51d4aa2.jpg",
+                "isInWadrobe": true,
+                "productUrl": ""
+            },
+            {
+                "title": "Sandals",
+                "photo": "https://secure-i2.ztat.net/detail_hd/TI/31/5B/00/XC/11/TI315B00X-C11@12.jpg",
+                "isInWadrobe": false,
+                "productUrl": ""
+            }
+        ]
     }
 ]
