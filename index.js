@@ -54,13 +54,6 @@ app.get('/getWeather', function (req, response) {
             data += chunk;
         });
         res.on('end', function() {
-            //var dataobject = JSON.parse(data);
-            // var weatherforecast = [];
-            // for (var i = 0; i < 10; i++) { 
-            //     var temp = "day" + ':' + dataobject.forecast.simpleforecast.forecastday[i].date.day;
-            //     weatherforecast.push(temp);
-            // }
-            //console.log(weatherforecast);
             response.end(data);
         });
         res.on('errors', function(e){
@@ -69,38 +62,65 @@ app.get('/getWeather', function (req, response) {
     });
 })
 
-
 app.get('/getOutlookEvents', function (req, response) {
-//   console.log("getting outlook events...");
-//   var http = require('http');
-//   var url = "https://outlook.office365.com/api/v1.0/me/events?$select=Subject,Organizer,Start,End";
+   console.log("getting outlook events data...");
    var data = "";
    
    var options = {
-       host: 'outlook.office365.com',
-       path: '/api/v1.0/me/events?$select=Subject,Organizer,Start,End',
-        headers: {
-            'Authorization': 'Basic YWRtaW5AaHJvb2tkZW1vMTEub25taWNyb3NvZnQuY29tOnBhc3NAd29yZDE='
-        }
+    host: ' outlook.office365.com',
+    path: '/api/v1.0/me/events?$select=Subject,Organizer,Start,End',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Basic YWRtaW5AaHJvb2tkZW1vMTEub25taWNyb3NvZnQuY29tOnBhc3NAd29yZDE='
+    }
    };
-   
-    // do the GET request
-    var reqGet = https.request(options, function(res) {
-        console.log("statusCode: ", res.statusCode);
-     
-        res.on('data', function(chunk) {
+
+   var request = https.get(options, function(res) {
+        res.on('data', function(chunk){
             data += chunk;
         });
-     
-    });
-     
-    reqGet.on('end', function(){
-        response.end(JSON.stringify(data));
-    });
-    reqGet.on('error', function(e) {
-        console.error(e);
+        res.on('end', function() {
+            response.end(data);
+        });
+        res.on('error', function(e){
+            console.log("There was an error: " + e.message)
+        });
     });
 });
+
+
+// app.get('/getOutlookEvents', function (req, response) {
+// //   console.log("getting outlook events...");
+// //   var http = require('http');
+// //   var url = "https://outlook.office365.com/api/v1.0/me/events?$select=Subject,Organizer,Start,End";
+//   var data = "";
+   
+//   var options = {
+//       host: 'outlook.office365.com',
+//       path: '/api/v1.0/me/events?$select=Subject,Organizer,Start,End',
+//         headers: {
+//             'Authorization': 'Basic YWRtaW5AaHJvb2tkZW1vMTEub25taWNyb3NvZnQuY29tOnBhc3NAd29yZDE='
+//         }
+//   };
+   
+//     // do the GET request
+//     var reqGet = https.request(options, function(res) {
+//         console.log("statusCode: ", res.statusCode);
+     
+//         res.on('data', function(chunk) {
+//             data += chunk;
+//         });
+     
+//     });
+     
+//     reqGet.on('end', function(){
+//         response.end(JSON.stringify(data));
+//     });
+//     reqGet.on('error', function(e) {
+//         console.error(e);
+//     });
+// });
 
 app.get('/getWalmartData', function (req, response) {
     var walmart = require('walmart')('s4uxqy9mcskf98g3gpzuvj2h');
